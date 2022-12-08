@@ -1,0 +1,35 @@
+.layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  width: 100%;
+  gap: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding-top: 3rem;
+
+  &-item {
+    margin-bottom: 3rem;
+    position: relative;
+
+    &:nth-of-type(5n + 1) {
+      .shelf {
+        border-left: 2px solid #000;
+      }
+    }
+
+    &:nth-of-type(5n + 5) {
+      .shelf {
+        border-right: 2px solid #000;
+      }
+    }
+
+    &:nth-of-type(15n + 5) {
+      .shelf {
+        border-right: 2px solid #000;
+      }
+    }
+  }
+}
